@@ -1,0 +1,22 @@
+language: java
+dist: trusty
+addons:
+  sonarcloud:
+    organization: antop-dev-github
+jdk:
+  - openjdk8
+branches:
+  only:
+    - master
+cache:
+  directories:
+    - $HOME/.m2
+install:
+  - mvn test-compile -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+script:
+  - mvn clean test jacoco:report -Dmultipart.upload.path=~
+after_success:
+  - mvn sonar:sonar -Dsonar.host.url=$SONAR_HOST_URL -Dsonar.projectKey=$SONAR_PROJECT_KEY
+  - mvn coveralls:report -DrepoToken=$COVERALLS_REPO_TOKEN
+notifications:
+  email: false
