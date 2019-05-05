@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Froala Editor + Spring</title>
@@ -18,15 +17,6 @@
     <!-- Include external CSS. -->
     <link th:href="@{/assets/font-awesome-4.7.0/css/font-awesome.min.css}" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" th:href="@{/assets/codemirror-5.45.0/codemirror.css}">
-=======
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="utf-8">
-    <!-- Include external CSS. -->
-    <link th:href="@{/assets/font-awesome-4.7.0/css/font-awesome.min.css}" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" th:href="@{/assets/codemirror-5.45.0/codemirror.css}">
-
->>>>>>> 8376c1a... initialize
     <!-- Include Editor style. -->
     <link th:href="@{/css/froala_editor.pkgd.min.css}" rel="stylesheet" type="text/css"/>
     <link th:href="@{/css/froala_style.min.css}" rel="stylesheet" type="text/css"/>
@@ -35,7 +25,6 @@
 <body>
 <!-- Create a tag that we will use as the editable area. -->
 <!-- You can use a div tag as well. -->
-<<<<<<< HEAD
 <form th:action="@{/submit}" method="post">
     <textarea id="froala" name="content"></textarea>
     <p>
@@ -53,9 +42,6 @@
     <div th:utext="${item.content}" class="fr-view"></div>
     <div style="clear: both"></div>
 </div>
-=======
-<textarea id="froala"></textarea>
->>>>>>> 8376c1a... initialize
 
 <!-- Include external JS libs. -->
 <script type="text/javascript" th:src="@{/assets/jquery-1.12.4/jquery.min.js}"></script>
@@ -63,7 +49,6 @@
 <script type="text/javascript" th:src="@{/assets/codemirror-5.45.0/mode/xml/xml.js}"></script>
 <!-- Include Editor JS files. -->
 <script type="text/javascript" th:src="@{/js/froala_editor.pkgd.min.js}"></script>
-<<<<<<< HEAD
 <script type="text/javascript" th:src="@{/js/languages/ko.js}"></script>
 <!-- Human file size to byte -->
 <script type="text/javascript" th:src="@{/js/byte.js}"></script>
@@ -118,14 +103,6 @@
 
     });
     /*]]>*/
-=======
-
-<!-- Initialize the editor. -->
-<script>
-    $(function () {
-        $('#floala').froalaEditor();
-    });
->>>>>>> 8376c1a... initialize
 </script>
 </body>
 </html>
